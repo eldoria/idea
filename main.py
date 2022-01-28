@@ -3,13 +3,13 @@ from discord.ext import commands
 from dotenv import load_dotenv
 import gpt_2_simple as gpt2
 
-from transformers import pipeline# , GPT2Tokenizer, GPT2LMHeadModel
+# from transformers import pipeline# , GPT2Tokenizer, GPT2LMHeadModel
 
 
 # tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
 # model = GPT2LMHeadModel.from_pretrained('gpt2')
 # generation = pipeline('text-generation')
-translation = pipeline('translation_en_to_fr')
+# translation = pipeline('translation_en_to_fr')
 
 load_dotenv()
 bot = commands.Bot(command_prefix='?')
