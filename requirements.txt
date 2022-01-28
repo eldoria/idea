@@ -1,5 +1,5 @@
 python-dotenv~=0.19.2
-tensorflow~=2.0.0
+tensorflow-cpu~=2.7.0
 transformers~=4.12.5
 discord-py~=1.7.3
 gpt_2_simple~=0.8.0
