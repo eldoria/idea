@@ -6,8 +6,11 @@ import gpt_2_simple as gpt2
 from transformers import pipeline
 
 
-en_to_fr = pipeline("translation_en_to_fr", model="Helsinki-NLP/opus-mt-en-fr")
-fr_to_en = pipeline("translation_fr_to_en", model="Helsinki-NLP/opus-mt-fr-en")
+# en_to_fr = pipeline("translation_en_to_fr", model="Helsinki-NLP/opus-mt-en-fr")
+# fr_to_en = pipeline("translation_fr_to_en", model="Helsinki-NLP/opus-mt-fr-en")
+
+en_to_fr = pipeline("translation_en_to_fr")
+fr_to_en = pipeline("translation_fr_to_en")
 
 bot = commands.Bot(command_prefix='?')
 
