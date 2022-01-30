@@ -1,13 +1,5 @@
-import os
 from discord.ext import commands
-# from dotenv import load_dotenv
 import gpt_2_simple as gpt2
-
-from transformers import pipeline
-
-
-# en_to_fr = pipeline("translation_en_to_fr", model="Helsinki-NLP/opus-mt-en-fr")
-# fr_to_en = pipeline("translation_fr_to_en", model="Helsinki-NLP/opus-mt-fr-en")
 
 bot = commands.Bot(command_prefix='?')
 
@@ -18,7 +10,6 @@ gpt2.load_gpt2(sess, run_name='run1')
 
 @bot.command(name='p')
 async def prediction(ctx, *message: str):
-    # message = fr_to_en(' '.join(message))[0]['translation_text']
     message = ' '.join(message)
     text_generated = gpt2.generate(sess,
                                    length=250,
@@ -27,11 +18,7 @@ async def prediction(ctx, *message: str):
                                    nsamples=1,
                                    return_as_list=True
                                    )[0]
-    '''
-    for sentence in text_generated.split('.'):
-        await ctx.send(en_to_fr(sentence)[0]['translation_text'])
-    '''
-    await ctx.send(message)
+    await ctx.send(text_generated)
 
 print('Bot prêt')
 bot.run('OTE3MDIxMTYyMjIxOTk4MDkw.Yayogg.zuYDHvvG68QKThE7B-2SZ9IeyNw')
