@@ -21,6 +21,6 @@ async def prediction(ctx, *message: str):
     await ctx.send(text_generated)
 
 print('Bot prêt')
-bot.run('OTE3MDIxMTYyMjIxOTk4MDkw.Yayogg.zuYDHvvG68QKThE7B-2SZ9IeyNw')
+bot.run('TOKEN_ID')
 
 
